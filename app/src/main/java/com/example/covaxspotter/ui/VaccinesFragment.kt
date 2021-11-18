@@ -29,8 +29,16 @@ class VaccinesFragment : Fragment() {
             findNavController().navigate(action)
         }
 
+
         binding.cardSino.setOnClickListener {
             val action = VaccinesFragmentDirections.actionVaccinesFragmentToSinopharmFragment()
+
+        binding.cardModerna.setOnClickListener {
+            val action = VaccinesFragmentDirections.actionVaccinesFragmentToModernaFragment()
+
+        binding.cardJnJ.setOnClickListener {
+            val action = VaccinesFragmentDirections.actionVaccinesFragmentToJnJFragment()
+
             findNavController().navigate(action)
         }
         /**

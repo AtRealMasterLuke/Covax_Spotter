@@ -3,8 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+
         <entry key="..\:/Users/J. KUT/Desktop/Covax_Spotter/app/src/main/res/layout/fragment_pfizer.xml" value="0.1" />
         <entry key="..\:/Users/J. KUT/Desktop/Covax_Spotter/app/src/main/res/layout/fragment_sinopharm.xml" value="0.14" />
+
+        <entry key="..\:/Users/Luke/StudioProjects/Covax_Spotter/app/src/main/res/layout/fragment_moderna.xml" value="0.2" />
+        <entry key="..\:/Users/Luke/StudioProjects/Covax_Spotter/app/src/main/res/layout/fragment_pfizer.xml" value="0.2" />
+        <entry key="..\:/Users/Luke/StudioProjects/Covax_Spotter/app/src/main/res/layout/fragment_vaccines.xml" value="0.1" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Covax_Spotter/app/src/main/res/layout/fragment_jn_j.xml" value="0.22" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Covax_Spotter/app/src/main/res/layout/fragment_pfizer.xml" value="0.25" />
+
         <entry key="..\:/Users/lenovo/AndroidStudioProjects/CovaxSpotter/app/src/main/res/drawable/dashboard_bg.xml" value="0.25833333333333336" />
         <entry key="..\:/Users/lenovo/AndroidStudioProjects/CovaxSpotter/app/src/main/res/drawable/round_cornered_btn.xml" value="0.2222222222222222" />
         <entry key="..\:/Users/lenovo/AndroidStudioProjects/CovaxSpotter/app/src/main/res/layout/activity_main.xml" value="0.17962962962962964" />

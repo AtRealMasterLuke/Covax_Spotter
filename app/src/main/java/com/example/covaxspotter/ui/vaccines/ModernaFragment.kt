@@ -6,6 +6,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.covaxspotter.R
+import com.example.covaxspotter.databinding.FragmentModernaBinding
+import com.example.covaxspotter.databinding.FragmentPfizerBinding
+import com.example.covaxspotter.utils.moderna
+import com.example.covaxspotter.utils.pfizer
 
 
 /**
@@ -14,13 +18,24 @@ import com.example.covaxspotter.R
  */
 
 class ModernaFragment : Fragment() {
+    private var _binding: FragmentModernaBinding?= null // backing property
+    private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
+        _binding = FragmentModernaBinding.inflate(inflater, container, false)
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_moderna, container, false)
+        return binding.root
+    }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding.modText.text = moderna
     }
 
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null //release memory at the end of lifecycle
+    }
 }
