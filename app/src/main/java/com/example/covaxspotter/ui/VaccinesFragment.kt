@@ -28,6 +28,10 @@ class VaccinesFragment : Fragment() {
             val action = VaccinesFragmentDirections.actionVaccinesFragmentToPfizerFragment()
             findNavController().navigate(action)
         }
+        binding.cardJnJ.setOnClickListener {
+            val action = VaccinesFragmentDirections.actionVaccinesFragmentToJnJFragment()
+            findNavController().navigate(action)
+        }
         /**
          * Add click listeners and directions for:
          * ->Astrazeneca
