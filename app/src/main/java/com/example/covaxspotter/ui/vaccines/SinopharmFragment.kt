@@ -5,20 +5,31 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.covaxspotter.R
+import com.example.covaxspotter.databinding.FragmentSinopharmBinding
+import com.example.covaxspotter.utils.sinopharm
 
 /**
  * TODOS
  * Add binding object and inflate the layout using the binding object.
  */
 class SinopharmFragment : Fragment() {
-
+    private var _binding: FragmentSinopharmBinding?= null // backing property
+    private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_sinopharm, container, false)
+                _binding = FragmentSinopharmBinding.inflate(inflater, container, false)
+        return binding.root
+    }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding.Text.text = sinopharm
+    }
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null //release memory at the end of lifecycle
     }
 }
