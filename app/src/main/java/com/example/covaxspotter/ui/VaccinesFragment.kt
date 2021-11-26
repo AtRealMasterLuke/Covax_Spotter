@@ -1,12 +1,11 @@
 package com.example.covaxspotter.ui
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.example.covaxspotter.R
 import com.example.covaxspotter.databinding.FragmentVaccinesBinding
 
 class VaccinesFragment : Fragment() {
@@ -29,28 +28,20 @@ class VaccinesFragment : Fragment() {
             findNavController().navigate(action)
         }
 
-
         binding.cardSino.setOnClickListener {
             val action = VaccinesFragmentDirections.actionVaccinesFragmentToSinopharmFragment()
+            findNavController().navigate(action)
 
+        }
         binding.cardModerna.setOnClickListener {
             val action = VaccinesFragmentDirections.actionVaccinesFragmentToModernaFragment()
-
-        binding.cardJnJ.setOnClickListener {
-            val action = VaccinesFragmentDirections.actionVaccinesFragmentToJnJFragment()
-
             findNavController().navigate(action)
         }
-        /**
-         * Add click listeners and directions for:
-         * ->Astrazeneca
-         * ->Jonhsons & Johnsons
-         * ->Moderna
-         * ->Sinopharm
-         */
-
+        binding.cardJnJ.setOnClickListener {
+                    val action = VaccinesFragmentDirections.actionVaccinesFragmentToJnJFragment()
+                    findNavController().navigate(action)
+        }
     }
-
 
     override fun onDestroyView() {
         super.onDestroyView()

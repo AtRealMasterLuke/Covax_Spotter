@@ -21,7 +21,7 @@ import kotlinx.coroutines.launch
 class CountiesFragment : Fragment() {
     private var _binding: FragmentCountiesBinding? = null
     private val binding get() = _binding!!
-    private lateinit var recyclerView: RecyclerView
+    //private lateinit var recyclerView: RecyclerView
 
     private val viewModel: MainViewModel by activityViewModels {
         MainViewModelFactory(
@@ -40,7 +40,7 @@ class CountiesFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        setUpRecyclerView()
+        //setUpRecyclerView()
 
         val countyAdapter = CountyAdapter {
             val action = CountiesFragmentDirections
@@ -49,7 +49,7 @@ class CountiesFragment : Fragment() {
             )
             view.findNavController().navigate(action)
         }
-        recyclerView.adapter = countyAdapter
+        binding.rvCountiesList.adapter = countyAdapter
 
         lifecycle.coroutineScope.launch {
             viewModel.readAll.observe(viewLifecycleOwner, {
@@ -59,10 +59,9 @@ class CountiesFragment : Fragment() {
     }
 
     private fun setUpRecyclerView() {
+       // recyclerView = binding.rvCountiesList
+        //binding.rvCountiesList.layoutManager = LinearLayoutManager(activity)
         Log.i("CountyFragment", "Adapter Called")
-        recyclerView = binding.rvCountiesList
-        binding.rvCountiesList.layoutManager = LinearLayoutManager(activity)
-
     }
 
     override fun onDestroyView() {
