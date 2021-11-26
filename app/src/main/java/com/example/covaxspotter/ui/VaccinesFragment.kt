@@ -1,12 +1,11 @@
 package com.example.covaxspotter.ui
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.example.covaxspotter.R
 import com.example.covaxspotter.databinding.FragmentVaccinesBinding
 
 class VaccinesFragment : Fragment() {
@@ -28,9 +27,15 @@ class VaccinesFragment : Fragment() {
             val action = VaccinesFragmentDirections.actionVaccinesFragmentToPfizerFragment()
             findNavController().navigate(action)
         }
+
+        binding.cardZenica.setOnClickListener {
+            val action = VaccinesFragmentDirections.actionVaccinesFragmentToAstraZenFragment()
+            findNavController().navigate(action)
+        }
+
+
         /**
          * Add click listeners and directions for:
-         * ->Astrazeneca
          * ->Jonhsons & Johnsons
          * ->Moderna
          * ->Sinopharm

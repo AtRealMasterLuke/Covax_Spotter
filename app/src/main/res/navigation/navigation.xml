@@ -31,7 +31,11 @@
         android:id="@+id/countiesFragment"
         android:name="com.example.covaxspotter.ui.CountiesFragment"
         android:label="@string/counties"
-        tools:layout="@layout/fragment_counties" />
+        tools:layout="@layout/fragment_counties" >
+        <action
+            android:id="@+id/action_countiesFragment_to_subCountiesFragment"
+            app:destination="@id/subCountiesFragment" />
+    </fragment>
     <fragment
         android:id="@+id/vaccinesFragment"
         android:name="com.example.covaxspotter.ui.VaccinesFragment"
@@ -102,4 +106,13 @@
         android:name="com.example.covaxspotter.ui.vaccines.SinopharmFragment"
         android:label="fragment_sinopharm"
         tools:layout="@layout/fragment_sinopharm" />
+    <fragment
+        android:id="@+id/subCountiesFragment"
+        android:name="com.example.covaxspotter.ui.SubCountiesFragment"
+        android:label="{countyName}"
+        tools:layout="@layout/fragment_sub_counties" >
+        <argument
+            android:name="countyName"
+            app:argType="string"/>
+    </fragment>
 </navigation>

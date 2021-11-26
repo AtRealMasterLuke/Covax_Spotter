@@ -1,14 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#54BAB0"
     tools:context=".ui.CountiesFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <!--
+    <SearchView
+        android:id="@+id/searchCounty"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:background="@drawable/search_bg"
+        android:queryHint="@string/county_hint"
+        android:iconifiedByDefault="false"
+        android:queryBackground="@android:color/transparent"
+        android:layout_margin="5dp" />
+-->
+   <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvCountiesList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       tools:listitem="@layout/county_item"
+        app:layout_constraintStart_toStartOf="parent" />
 
-</FrameLayout>
+</LinearLayout>

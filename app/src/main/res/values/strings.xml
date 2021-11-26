@@ -20,5 +20,5 @@
     <string name="moderna">Moderna Vaccine</string>
     <string name="sino">Sinopharm BBIBP Vaccine</string>
 
-
+    <string name="county_hint">Enter County</string>
 </resources>

@@ -6,6 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.covaxspotter.R
+import com.example.covaxspotter.databinding.FragmentAstraZenBinding
+import com.example.covaxspotter.utils.pfizer
+import com.example.covaxspotter.utils.zeneca
 
 /**
  * TODOS
@@ -13,14 +16,27 @@ import com.example.covaxspotter.R
  */
 
 class AstraZenFragment : Fragment() {
+    private var _binding: FragmentAstraZenBinding? = null
+    private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_astra_zen, container, false)
+       _binding = FragmentAstraZenBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding.zenText.text = zeneca
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null //release memory at the end of lifecycle
+    }
 
     }
